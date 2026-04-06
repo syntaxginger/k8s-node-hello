@@ -1,8 +1,8 @@
-// app.js (Updated)
+// app.js (Updated for CI/CD Test)
 const http = require('http');
 
-// ดึงค่าจาก Environment Variables ที่ Kubernetes ส่งมาให้
-const MESSAGE = process.env.APP_MESSAGE || "Default Hello";
+// แก้ไขบรรทัดนี้เพื่อให้เห็นความเปลี่ยนแปลงใน Pipeline
+const MESSAGE = process.env.APP_MESSAGE || "Hello from the Automated Pipeline!";
 const API_KEY = process.env.API_KEY || "UNSET_KEY";
 
 const requestHandler = (request, response) => {
